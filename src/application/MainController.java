@@ -120,6 +120,7 @@ public class MainController {
 
 	int currentIndexMsg, oraCorrente = 0;
 
+	// ADMINS
 	@FXML
 	public void init() {
 		ora.setText(formattaTempo(gara.tempoCorrente));
@@ -211,6 +212,7 @@ public class MainController {
 		}
 	}
 
+	// AHEMD
 	@FXML
 	void iniziaGara(ActionEvent event) {
 		gara = new Gara();
@@ -290,16 +292,19 @@ public class MainController {
 
 	}
 
+	// GRANDINI ⭐
 	@FXML
 	void chiudiPopup(ActionEvent event) {
 		popup.setVisible(false);
 	}
 
+	// GRANDINI ⭐
 	@FXML
 	void chiudiPodio(ActionEvent event) {
 		podio.setVisible(false);
 	}
-
+	
+	// AHMED - CARLOS
 	public void updateHypercars(ArrayList<Hypercar> hypercars) {
 		scoreboard.getChildren().clear();
 
@@ -402,6 +407,7 @@ public class MainController {
 		}
 	}
 
+	// GRANDINI - CARLOS
 	public void updateMessaggi() {
 		for (int i = currentIndexMsg; i < gara.gestione.messaggi.size(); i++) {
 			Messaggio messaggio = gara.gestione.messaggi.get(i);
@@ -431,6 +437,7 @@ public class MainController {
 		currentIndexMsg = gara.gestione.messaggi.size();
 	}
 
+	// AHEMD
 	public void apriPopup(Hypercar car) {
 		popup.setVisible(true);
 		modelloPopup.setText(car.modello);
@@ -458,6 +465,7 @@ public class MainController {
 
 	}
 
+	// AHMED
 	public void confrontaPosizioneAuto(int ora, Label stato, int hypercarId) {
 		ArrayList<Hypercar> prevHour = gara.registroOre.get(ora - 2).hypercars;
 		ArrayList<Hypercar> currentHour = gara.registroOre.get(ora - 1).hypercars;
@@ -485,6 +493,7 @@ public class MainController {
 
 	}
 
+	// ADMINS
 	@FXML
 	public void switchToChat(Event event) {
 		if (AutenticazioneController.tema.equals("dark")) {
@@ -514,6 +523,7 @@ public class MainController {
 		}
 	}
 
+	// AHMED
 	public String formattaTempo(int tempo) {
 		return String.format("%02d:%02d:%02d", (int) (tempo / 3600), (int) ((tempo / 60) % 60), (int) (tempo % 60));
 	}

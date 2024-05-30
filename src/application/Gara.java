@@ -22,6 +22,7 @@ public class Gara {
 		init();
 	}
 
+	// HU
 	public void init() {
 
 		String motori[] = { "V8", "V6", "Inline-4", "Inline-6", "Boxer", "W12", "W16", "Rotary", "V10", "V12",
@@ -90,6 +91,7 @@ public class Gara {
 		}
 	}
 
+	// FEO
 	public void inizia() {
 		iniziata = true;
 
@@ -160,6 +162,7 @@ public class Gara {
 
 	}
 
+	// FEO
 	public void registraDatiOraCorrente() {
 		RegistroOra registroOra = new RegistroOra(this.oraCorrente);
 		registroOra.rigistraAuto(gestione.hypercars);
@@ -179,6 +182,7 @@ public class Gara {
 		}
 	}
 
+	// FEO
 	public void giroFinale() {
 		int numeroGiriPiuAlto = gestione.hypercars.get(0).numeroGiri;
 		gestione.messaggi.add(new Messaggio("Giro Finale", tempoCorrente));

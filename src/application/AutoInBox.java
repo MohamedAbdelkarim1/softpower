@@ -1,6 +1,6 @@
 package application;
 
-
+// HU
 public class AutoInBox {
 	int id;
 	int tempo;

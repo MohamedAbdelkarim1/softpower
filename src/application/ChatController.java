@@ -60,6 +60,7 @@ public class ChatController extends BackToGara {
 
 	String sentMessage, receivedMessage, hoverColor, selectedColor, contentColor, nameColor = "#ffffff";
 
+	// RAMOS
 	@FXML
 	void logout(ActionEvent event) {
 		if (AutenticazioneController.tema.equals("dark")) {
@@ -84,6 +85,7 @@ public class ChatController extends BackToGara {
 
 	}
 
+	// RAMOS
 	@FXML
 	void cambiaTema() {
 		if (AutenticazioneController.tema.equals("dark")) {
@@ -142,6 +144,7 @@ public class ChatController extends BackToGara {
 		cambioUser();
 	}
 
+	// DRAGONETTI - RAMOS - ZUNIGA
 	@FXML
 	void inizializzaContatti() {
 		if (userMitt.equals("amministrazione"))
@@ -194,6 +197,7 @@ public class ChatController extends BackToGara {
 		}
 	}
 
+	// MARTINO 
 	@FXML
 	public void cambioUser(MouseEvent e) {
 		pane.setStyle("-fx-background-color: transparent;");
@@ -208,6 +212,7 @@ public class ChatController extends BackToGara {
 		caricaMessaggi();
 	}
 
+	// MARTINO 
 	public void cambioUser() {
 		pane = (AnchorPane) contenitoreContatti.lookup("#" + userDest);
 		pane.setStyle("-fx-background-color: " + selectedColor);
@@ -219,6 +224,7 @@ public class ChatController extends BackToGara {
 		caricaMessaggi();
 	}
 
+	// MARTINO - ALONSO
 	@FXML
 	public void caricaMessaggi() {
 		if (chat.messaggi.size() > 6)
@@ -254,12 +260,13 @@ public class ChatController extends BackToGara {
 			contenitore_messaggi.getChildren().add(contenitore);
 		}
 	}
-
+	
+	// MARTINO
 	@FXML
 	public void invia() {
 		String messaggio = input.getText();
-		if (messaggio == null ||messaggio.length() == 0 || messaggio.length() > 30) {
-			
+		if (messaggio == null || messaggio.length() == 0 || messaggio.length() > 30) {
+
 		} else {
 			chat.aggiungiMessaggio(messaggio);
 			contenitore_messaggi.getChildren().clear();
@@ -268,6 +275,7 @@ public class ChatController extends BackToGara {
 		input.setText(null);
 	}
 
+	// SCIMONE
 	public String dashedToUppercase(String dashed) {
 		String abc = "";
 		String[] userDestNoDash = dashed.split("-");
@@ -283,6 +291,7 @@ public class ChatController extends BackToGara {
 		return abc.trim();
 	}
 
+	// ADMINS
 	public void init() {
 		gestoreRubrica = new GestoreRubrica(userMitt);
 		userDest = gestoreRubrica.contatti.get(0);

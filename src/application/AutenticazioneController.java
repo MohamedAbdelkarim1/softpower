@@ -58,6 +58,7 @@ public class AutenticazioneController extends BackToGara {
 	private ImageView theme;
 	static String tema = "dark";
 
+	// RAMOS - ZUNIGA
 	@FXML
 	public void changeTheme() {
 		if (tema.equals("dark")) {
@@ -89,6 +90,7 @@ public class AutenticazioneController extends BackToGara {
 		}
 	}
 
+	// RAMOS
 	@FXML
 	public void mostraPassword() {
 		if (passwordField.isVisible()) {
@@ -102,6 +104,7 @@ public class AutenticazioneController extends BackToGara {
 		}
 	}
 
+	// ZUNIGA - BROSOTO - DRAGONETTI
 	@FXML
 	boolean accedi(ActionEvent event) {
 		input_username.textProperty().addListener((observable, oldValue, newValue) -> {

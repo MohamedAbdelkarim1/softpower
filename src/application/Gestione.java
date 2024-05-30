@@ -10,6 +10,7 @@ public class Gestione {
 	ArrayList<Messaggio> messaggi = new ArrayList<Messaggio>();
 	ArrayList<AutoInBox> autoInBox = new ArrayList<AutoInBox>();
 
+	// ADMINS
 	public static int trovaPosizioneAutoInOraTramiteId(ArrayList<Hypercar> hypercars, int id) {
 		for (int i = 0; i<hypercars.size(); i++) {
 			if (hypercars.get(i).id == id) return i;
@@ -17,6 +18,7 @@ public class Gestione {
 		return 0;
 	}
 	
+	// TURRIN
 	public Hypercar trovaAutoTramiteID(int id) {
 		for (int i = 0; i < hypercars.size(); i++) {
 			if (hypercars.get(i).id == id) {
@@ -27,6 +29,7 @@ public class Gestione {
 		return null;
 	}
 
+	// TURRIN
 	public ArrayList<Hypercar> trovaAutoRitirate() {
 		ArrayList<Hypercar> ritirate = new ArrayList<Hypercar>();
 		for (int i = 0; i < hypercars.size(); i++) {
@@ -38,6 +41,7 @@ public class Gestione {
 		return ritirate;
 	}
 
+//	HU
 	public Boolean verificaAutoInBoxTramiteID(int id) {
 		for (int i = 0; i < autoInBox.size(); i++) {
 			if (autoInBox.get(i).id == id) {
@@ -47,6 +51,7 @@ public class Gestione {
 		return false;
 	}
 
+	// HU
 	public void aggiornaAutoInBox(int tempoCorrente) {
 		for (int i = 0; i < autoInBox.size(); i++) {
 			autoInBox.get(i).tempo++;
@@ -59,6 +64,7 @@ public class Gestione {
 
 	}
 
+	// HU
 	public void ordinaClassifica() {
 		Hypercar hyperVar = null;
 		for (int i = 0; i < hypercars.size(); i++) {

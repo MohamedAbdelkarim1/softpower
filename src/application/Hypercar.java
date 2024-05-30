@@ -12,6 +12,7 @@ public class Hypercar {
 	GiroPiuVeloce giroPiuVeloce;
 	ArrayList<Driver> piloti = new ArrayList<Driver>();
 
+	// BISOGNI
 	public Hypercar(int id, String scuderia, String motore, String modello, int lunghezzaGiro,
 			ArrayList<Driver> piloti) {
 
@@ -26,6 +27,7 @@ public class Hypercar {
 		}
 	}
 
+	// BISOGNI
 	public void corri() {
 		int velocita = (int) (Math.random() * (VELOCITA_MASSIMA - VELOCITA_MINIMA) + VELOCITA_MINIMA);
 		spazioPercorso += velocita;
@@ -39,6 +41,7 @@ public class Hypercar {
 
 	}
 
+	// BISOGNI
 	public void aggiornaDati() {
 		for (Driver pilota : this.piloti) {
 			if (pilota.staGuidando) {
@@ -57,6 +60,7 @@ public class Hypercar {
 
 	}
 
+//	PRIO
 	public Boolean controllaCambioDriver() {
 
 		for (int i = 0; i < this.piloti.size(); i++) {
@@ -76,6 +80,7 @@ public class Hypercar {
 		return false;
 	}
 
+	// PRIO
 	public void controllaGiroPiuVeloce() {
 		if (giroPiuVeloce == null || this.tempoInGiro < this.giroPiuVeloce.tempo) {
 			Driver pilotaInGuida = null;
