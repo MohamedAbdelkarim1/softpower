@@ -58,7 +58,7 @@ public class AutenticazioneController extends BackToGara {
 	private ImageView theme;
 	static String tema = "dark";
 
-	// RAMOS - ZUNIGA
+	// RAMOS
 	@FXML
 	public void changeTheme() {
 		if (tema.equals("dark")) {

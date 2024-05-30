@@ -303,8 +303,8 @@ public class MainController {
 	void chiudiPodio(ActionEvent event) {
 		podio.setVisible(false);
 	}
-	
-	// AHMED - CARLOS
+
+	// AHMED
 	public void updateHypercars(ArrayList<Hypercar> hypercars) {
 		scoreboard.getChildren().clear();
 
@@ -367,9 +367,14 @@ public class MainController {
 				stato.setFont(new Font("Arial", 14));
 				stato.setLayoutY(16);
 				stato.setTextFill(javafx.scene.paint.Color.valueOf("#fefefe"));
-				stato.setText("In Gara");
-				if (gara.gestione.verificaAutoInBoxTramiteID(car.id))
+				if (car.ritirata) {
+					stato.setText("Ritirata");
+				} else if (gara.gestione.verificaAutoInBoxTramiteID(car.id)) {
 					stato.setText("In Box");
+				} else {
+					stato.setText("In Gara");
+				}
+
 			} else if (timeMenu.getText().equals("1")) {
 				img = new ImageView(new Image(getClass().getResourceAsStream("/images/neutro.png")));
 				img.setFitHeight(20);
@@ -407,7 +412,7 @@ public class MainController {
 		}
 	}
 
-	// GRANDINI - CARLOS
+	// GRANDINI
 	public void updateMessaggi() {
 		for (int i = currentIndexMsg; i < gara.gestione.messaggi.size(); i++) {
 			Messaggio messaggio = gara.gestione.messaggi.get(i);

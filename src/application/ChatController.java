@@ -144,7 +144,7 @@ public class ChatController extends BackToGara {
 		cambioUser();
 	}
 
-	// DRAGONETTI - RAMOS - ZUNIGA
+	// DRAGONETTI - ZUNIGA
 	@FXML
 	void inizializzaContatti() {
 		if (userMitt.equals("amministrazione"))

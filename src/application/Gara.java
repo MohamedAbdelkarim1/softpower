@@ -168,7 +168,8 @@ public class Gara {
 		registroOra.rigistraAuto(gestione.hypercars);
 		this.registroOre.add(registroOra);
 	}
-
+	
+	// FEO
 	public void controlloFineGara() {
 		if (tempoCorrente == DURATA_GARA || giroDecisivo) {
 			if (gestione.hypercars.get(0).numeroGiri == gestione.hypercars.get(1).numeroGiri) {
