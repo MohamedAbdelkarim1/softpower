@@ -493,6 +493,8 @@ public class MainController {
 			AutenticazioneController.tema = "dark";
 		}
 		try {
+			bar.cancel();
+			timer.cancel();
 			Image icon = new Image("images\\whatsapp.png");
 			FXMLLoader loader = new FXMLLoader(getClass().getResource("Autenticazione.fxml"));
 			Parent root = loader.load();

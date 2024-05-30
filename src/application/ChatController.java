@@ -258,8 +258,8 @@ public class ChatController extends BackToGara {
 	@FXML
 	public void invia() {
 		String messaggio = input.getText();
-		if (messaggio.length() == 0 || messaggio.length() > 30) {
-
+		if (messaggio == null ||messaggio.length() == 0 || messaggio.length() > 30) {
+			
 		} else {
 			chat.aggiungiMessaggio(messaggio);
 			contenitore_messaggi.getChildren().clear();
