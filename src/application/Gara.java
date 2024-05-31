@@ -7,7 +7,7 @@ import java.util.TimerTask;
 
 public class Gara {
 
-	int DURATA_GARA = 86400, LUNGHEZZA_GIRO = 13626, FATTORE_RIDUZIONE_TEMPO_IN_MILLISECONDI = 8;
+	int DURATA_GARA = 86400, LUNGHEZZA_GIRO = 13626, FATTORE_RIDUZIONE_TEMPO_IN_MILLISECONDI = 1;
 
 	int tempoCorrente = 0, oraCorrente = 0;
 	boolean fine, giroDecisivo;
